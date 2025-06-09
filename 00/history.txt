@@ -1,0 +1,153 @@
+    1  echo <3
+    2  echo > ~/.bash_history 
+    3  echo "<3"
+    4  touch fichier
+    5  ls
+    6  cat fichier
+    7  ls -lha
+    8  cd .ssh
+    9  ls -lha
+   10  clear
+   11  ls
+   12  cd
+   13  pwd
+   14  ls /home
+   15  ls /home/ubuntu/
+   16  ls lha /home/ubuntu/
+   17  ls -lha /home/ubuntu/
+   18  ls -lha /home/ubuntu/.ssh
+   19  cat /home/ubuntu/.ssh/authorized_keys 
+   20  python --version
+   21  python3 --version
+   22  pwd
+   23  ls -lha
+   24  cat .bash_history 
+   25  history 
+   26  ls -lha .ssh
+   27  cat .ssh/authorized_keys 
+   28  cat .ssh/config
+   29  cat .bashrc
+   30  apt update
+   31  apt upgrade
+   32  systemctl restart console-getty.service cron.service pmcd.service pmie.service pmie_farm.service pmlogger.service pmlogger_farm.service pmproxy.service
+   33  reboot
+   34  history
+   35  ls
+   36  pwd
+   37  ls /
+   38  free -h
+   39  htop
+   40  apt autoremove --purge
+   41  apt autoclean
+   42  apt update
+   43  ls /etc
+   44  cat /etc/host
+   45  cat /etc/hosts
+   46  cat /etc/resolv.conf
+   47  ping yahoo.com
+   48  ls /etc/ssh
+   49  ls /etc/systemd
+   50  ls /etv
+   51  ls /etc
+   52  iptables -L
+   53  nftables -L
+   54  cat /etc/nftables.conf 
+   55  LS :ETC:APT
+   56  ls /etc/apt
+   57  ls -lh /etc/fstab
+   58  ls -lh /etc/group
+   59  ls -lh /etc/shadow
+   60  cat /etc/shadow
+   61  ls
+   62  pwd
+   63  ls /etc/fs*
+   64  ls /etc/su*
+   65  cat /etc/group
+   66  cat /etc/hostname
+   67  ls -lh sudoers
+   68  ls -lh /etc/sudoers
+   69  cat /etc/sudoers
+   70  ls -lha /var/log
+   71  ls /bin
+   72  ls /sbin
+   73  echo $PATH
+   74  snap --version
+   75  snap -?
+   76  snap update
+   77  snap
+   78  snap refresh
+   79  snap -h refresh
+   80  snap info info
+   81  snap info refresh
+   82  snap version
+   83  snap info
+   84  journalctl
+   85  clear
+   86  journalctl -h
+   87  echo $PATH
+   88  ls .local
+   89  ls .local/share
+   90  ls .local/share/code-server/
+   91  wich sudo | xargs ls -lh
+   92  which sudo | xargs ls -lh
+   93  ls -lha /tmp
+   94  su - ubuntu
+   95  \n--- 1. update
+   96  echo '--- 1. update'; apt update && echo '--- 2. upgrade'; apt -y upgrade && echo '--- 3. autoremove'; apt autoremove --purge && echo '--- 4. autoclean'; apt autoclean && echo '--- 5. done'
+   97  systemctl start nginx
+   98  systemctl status nginx
+   99  systemctl stop nginx
+  100  systemctl status nginx
+  101  systemctl reload nginx
+  102  journalctl -u nginx
+  103  systemctl start nginx
+  104  ls
+  105  adduser u2
+  106  ls /home
+  107  su -u2
+  108  su - u2
+  109  adduser u3
+  110  su - u2
+  111  su - ubuntu
+  112  pwd
+  113  cd /var
+  114  ls
+  115  cd www
+  116  ls
+  117  cd site01
+  118  ls
+  119  curl https://github.com/ctsm63/cocadmin/blob/main/Capture%20d%E2%80%99%C3%A9cran%202025-05-25%20162145.jpg
+  120  curl https://github.com/ctsm63/cocadmin/blob/main/Capture%20d%E2%80%99%C3%A9cran%202025-05-25%20162145.jpg?raw=true
+  121  ls -lh
+  122  wget
+  123  wget https://github.com/ctsm63/cocadmin/blob/main/Capture%20d%E2%80%99%C3%A9cran%202025-05-25%20162145.jpg?raw=true
+  124  ls
+  125  mv 'Capture d’écran 2025-05-25 162145.jpg?raw=true' halloween.jpg
+  126  ls
+  127  ls -lh
+  128  nano halloween.jpg 
+  129  nano index.html 
+  130  ls -lh
+  131  cd ..
+  132  ls -lh www
+  133  ls
+  134  cd www
+  135  ls
+  136  cd site01/
+  137  ls
+  138  nano index.html 
+  139  wget https://github.com/ctsm63/cocadmin/blob/main/Capture%20d%E2%80%99%C3%A9cran%202025-05-25%20175731.jpg?raw=true
+  140  ls
+  141  mv 'Capture d’écran 2025-05-25 175731.jpg?raw=true' CIDR.jpg
+  142  ls
+  143  nano index.html
+  144  pwd
+  145  cd /var/www
+  146  lls
+  147  ls
+  148  cd site01
+  149  ls
+  150  pwd
+  151  ls -lh
+  152  cat 1
+  153  history >history.txt
