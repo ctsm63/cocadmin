@@ -1,0 +1,2 @@
+alias maj="echo '--- 1. update'; apt update && echo '--- 2. upgrade'; apt -y upgrade && echo '--- 3. autoremove'; apt autoremove --purge -y && echo '--- 4. autoclean'; apt autoclean -y && echo '--- 5. done'"
+
