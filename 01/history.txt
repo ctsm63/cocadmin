@@ -1,0 +1,159 @@
+    1  echo <3
+    2  echo > ~/.bash_history 
+    3  echo "<3"
+    4  htop
+    5  cat hosts
+    6  ls
+    7  apt install gir
+    8  apt install git
+    9  nano .bashrc
+   10  ls
+   11  . .bashrc
+   12  maj
+   13  apt update
+   14  apt install pipx -y 
+   15  pipx install ansible-core
+   16  pipx install ansible
+   17  pipx ensurepath
+   18  source ~/.bashrc
+   19  ansible --version
+   20  cat .bashrc
+   21  htop
+   22  nano hosts
+   23  ls
+   24  cat hosts
+   25  ansible all -i ./hosts -m ping
+   26  ansible-galaxy install geerlingguy.haproxy
+   27  ansible-galaxy install geerlingguy.nginx
+   28  ls
+   29  nano mon_playbook.yml
+   30  ls
+   31  cat mon_playbook.yml 
+   32  ls
+   33  ansible-playbook -i ./hosts mon_playbook.yml
+   34  echo -e "
+   35  http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname'  | tail -n 1).peperelab.com/proxy/80/ 
+   36  "
+   37  echo -e "
+   38  http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname' 
+   39  "
+   40  echo -e "
+   41  http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname'  | tail -n 1).peperelab.com/proxy/80/ 
+   42  "
+   43  echo -e "
+   44  http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname'  | tail -n 1) 
+   45  "
+   46  echo -e "
+   47  http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname') 
+   48  "
+   49  echo -e "
+   50  http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname'  | tail -n 1).peperelab.com/proxy/80/ 
+   51  "
+   52  curl -L "http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname' | tail -n 1).peperelab.com/proxy/80/"
+   53  curl -s "http://$(ANSIBLE_PYTHON_INTERPRETER=auto_silent ansible -i hosts haproxy -m command -a 'hostname' | tail -n 1).peperelab.com/proxy/80/" | head -n 1
+   54  pip install requests
+   55  pip3 install requests
+   56  python3 --version
+   57  apt install python3-pip
+   58  pip install requests
+   59  pip3 install requests
+   60  python3 -m venv path/to/venv
+   61  ls
+   62  rm -rf path
+   63  ls
+   64  python3 -m venv test
+   65  ls test
+   66  ls test/bin
+   67  test/bin/activate
+   68  . test/bin/activate
+   69  ls
+   70  pip3 install requests
+   71  nano 01.py
+   72  less 01.py
+   73  python 01.py
+   74  cat
+   75  ls
+   76  vi 01.py 
+   77  ls
+   78  nano 02stats.py
+   79  ls
+   80  python 02stats.py 
+   81  ls
+   82  nano 03nbEnParam.py
+   83  pyton 03nbEnParam.py 10
+   84  pyton3 03nbEnParam.py 10
+   85  python3 03nbEnParam.py 10
+   86  python3 03nbEnParam.py 100
+   87  python3 03nbEnParam.py 10000
+   88  ls
+   89  nano 04threads.py
+   90  ls
+   91  python 04threads.py 
+   92  python 04threads.py 10000
+   93  ls
+   94  nano 05tempsHTTP.py
+   95  python 05tempsHTTP.py | tee 05.log
+   96  ls
+   97  less 05.log
+   98  ls
+   99  nano 06temps_stats.py
+  100  python 06temps_stats.py | tee 06.log
+  101  python 06temps_stats.py 10000 | tee 06_10000.log
+  102  ls
+  103  less 06_10000.log 
+  104  pip install pyyaml
+  105  ls
+  106  nano 07defautYAML.py
+  107  ls
+  108  nano 06config.yaml
+  109  ls
+  110  mv 06config.yaml 07config.yaml 
+  111  ls
+  112  nano 07defautYAML.py 
+  113  ls 07*
+  114  python 07defautYAML.py 
+  115  ls
+  116  ls 07*
+  117  cat 07config.yaml 
+  118  ls
+  119  cat 01.py
+  120  maj
+  121  reboot
+  122  apt install git
+  123  ls
+  124  cat ~/.ssh/id_rsa.pub | pbcopy
+  125  ls .ssh*
+  126  ls .ssh
+  127  apt install openssh-client
+  128  ssh -V
+  129  ssh-keygen -t ed25519 -b 4096 -C "{cyrt63@gmail.com}" -f ~/.ssh/mybitbucket
+  130  ls .ssh
+  131  cd .ssh
+  132  ks
+  133  ls
+  134  cat mybitbucket.pub
+  135  ssh -T git@bitbucket.org
+  136  ssh -T cyrt63@bitbucket.org
+  137  ls
+  138  ssh -T cyrt63@gmail.com
+  139  ls
+  140  rm -f mybitbucket*
+  141  ls
+  142  cat authorized_keys 
+  143  ls
+  144  cat id_ed25519.pub 
+  145  git clone git@github.com:ctsm63/cocadmin.git
+  146  ls -lha
+  147  rm -rf cocadmin/
+  148  cd
+  149  git clone git@github.com:ctsm63/cocadmin.git
+  150  ls -mh
+  151  ls -lh
+  152  mv *.py cocadmin/
+  153  ls
+  154  mv *.log cocadmin/
+  155  mv *.yam cocadmin/
+  156  mv *.yaml cocadmin/
+  157  ls
+  158  ls test/
+  159  history >history.txtx

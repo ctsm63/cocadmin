@@ -1,0 +1,67 @@
+---
+- name: Setup NGINX Web Servers
+  hosts: web
+  become: yes
+
+  roles:
+    - role: geerlingguy.nginx
+
+  vars:
+    nginx_vhosts:
+    - listen: "80"
+      server_name: "_"
+      root: "/var/www/2048/app"
+
+  tasks:
+    - name: Install Git
+      apt:
+        name: git
+        state: present
+
+    - name: Clone the 2048 game repository
+      git:
+        repo: "https://github.com/ttwthomas/2048.git"
+        dest: "/var/www/2048"
+        version: HEAD
+        force: yes
+
+    - name: Ensure the 2048 directory has correct permissions
+      file:
+        path: "/var/www/2048"
+        mode: '0755'
+        state: directory
+        recurse: true
+
+    - name: Append Ansible hostname to /var/www/2048/app/index.html
+      lineinfile:
+        path: /var/www/2048/app/index.html
+        line: "Hostname: {{ inventory_hostname }}"
+        create: yes
+        insertafter: BOF
+
+    - name: Remove default Nginx configuration
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+      notify: restart nginx # "restart_nginx" seulement si la tache modifié et une seule fois même si d'autres taches on notify
+
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+
+
+- name: Setup HAProxy Load Balancer
+  hosts: loadbalancer
+  become: yes
+  roles:
+    - role: geerlingguy.haproxy
+  vars:
+    haproxy_backend_httpchk: ""
+    haproxy_backend_servers:
+      - name: web1
+        address: "{{ hostvars['web1']['ansible_host'] }}:80"
+      - name: web2
+        address: "{{ hostvars['web2']['ansible_host'] }}:80"
+
