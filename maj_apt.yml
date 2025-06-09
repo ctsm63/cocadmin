@@ -1,0 +1,15 @@
+---
+- name: Mettre à jour les paquets sur les serveurs
+  hosts: all
+  become: yes  # pour exécuter avec les privilèges root
+  tasks:
+    - name: Mise à jour de la liste des paquets
+      apt:
+        update_cache: yes
+
+    - name: Mise à niveau des paquets
+      apt:
+        upgrade: dist  # équivalent de `apt upgrade -y`
+        autoremove: yes
+        autoclean: yes
+

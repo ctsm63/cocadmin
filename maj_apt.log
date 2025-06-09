@@ -1,0 +1,151 @@
+
+PLAY [Mettre à jour les paquets sur les serveurs] ******************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Platform linux on host 10.141.17.15 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+ok: [10.141.17.15]
+[WARNING]: Platform linux on host 10.141.17.124 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.20 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.71 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.45 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.201 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.128 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+ok: [10.141.17.124]
+ok: [10.141.17.20]
+ok: [10.141.17.71]
+ok: [10.141.17.45]
+ok: [10.141.17.201]
+ok: [10.141.17.128]
+
+TASK [Mise à jour de la liste des paquets] *************************************
+changed: [10.141.17.124]
+changed: [10.141.17.20]
+changed: [10.141.17.15]
+changed: [10.141.17.71]
+changed: [10.141.17.45]
+changed: [10.141.17.201]
+changed: [10.141.17.128]
+
+TASK [Mise à niveau des paquets] ***********************************************
+ok: [10.141.17.71]
+ok: [10.141.17.20]
+ok: [10.141.17.124]
+ok: [10.141.17.45]
+ok: [10.141.17.15]
+ok: [10.141.17.201]
+ok: [10.141.17.128]
+
+PLAY RECAP *********************************************************************
+10.141.17.124              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.128              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.15               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.20               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.201              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.45               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.71               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+========== 2025-06-09 22:18:49
+
+
+PLAY [Mettre à jour les paquets sur les serveurs] ******************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Platform linux on host 10.141.17.15 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+ok: [10.141.17.15]
+[WARNING]: Platform linux on host 10.141.17.124 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.71 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.20 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.45 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.201 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+[WARNING]: Platform linux on host 10.141.17.128 is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+ok: [10.141.17.124]
+ok: [10.141.17.71]
+ok: [10.141.17.20]
+ok: [10.141.17.45]
+ok: [10.141.17.201]
+ok: [10.141.17.128]
+
+TASK [Mise à jour de la liste des paquets] *************************************
+changed: [10.141.17.15]
+changed: [10.141.17.20]
+changed: [10.141.17.124]
+changed: [10.141.17.71]
+changed: [10.141.17.45]
+changed: [10.141.17.201]
+changed: [10.141.17.128]
+
+TASK [Mise à niveau des paquets] ***********************************************
+ok: [10.141.17.71]
+ok: [10.141.17.20]
+ok: [10.141.17.15]
+ok: [10.141.17.124]
+ok: [10.141.17.45]
+ok: [10.141.17.201]
+ok: [10.141.17.128]
+
+PLAY RECAP *********************************************************************
+10.141.17.124              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.128              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.15               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.20               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.201              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.45               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.141.17.71               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
