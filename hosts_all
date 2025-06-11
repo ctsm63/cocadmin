@@ -1,9 +1,4 @@
 [servers]
-10.141.17.71 ansible_python_interpreter=/usr/bin/python3
-10.141.17.20 ansible_python_interpreter=/usr/bin/python3
-10.141.17.15 ansible_python_interpreter=/usr/bin/python3
 10.141.17.45 ansible_python_interpreter=/usr/bin/python3
-10.141.17.124 ansible_python_interpreter=/usr/bin/python3
-10.141.17.201 ansible_python_interpreter=/usr/bin/python3
-10.141.17.128 ansible_python_interpreter=/usr/bin/python3
+10.141.17.56 ansible_python_interpreter=/usr/bin/python3
 
