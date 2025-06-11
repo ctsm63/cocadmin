@@ -1,0 +1,62 @@
+    1  echo > .bash_history 
+    2  <3
+    3  uptime
+    4  htop 
+    5  cat /etc/machine-id 
+    6  vi /etc/netplan/50-cloud-init.yaml 
+    7  echo       dhcp-identifier: mac
+    8  cat /etc/machine-id 
+    9  cloud-init clean --machine-id
+   10  cloud-init clean
+   11  apt update
+   12  apt install docker.io -y
+   13  git clone https://github.com/ttwthomas/2048.git
+   14  cd 2048
+   15  nano Dockerfile
+   16  ls
+   17  cat Dockerfile 
+   18  ls
+   19  docker build -t mon-app-2048 .
+   20  docker run -p 30080:80 mon-app-2048
+   21  podman --help
+   22  podman build --help
+   23  ls
+   24  docker ps -a
+   25  docker exec -ti a8e96fea1f03 bash
+   26  docker run -d -p 30080:80 mon-app-2048
+   27  docker ps
+   28  docker exec -ti fcfa261f5314 bash
+   29  docker exec -ti fcfa261f5314 sh
+   30  docker ps
+   31  docker -h
+   32  docker stop fcfa261f5314
+   33  docker ps
+   34  docker ps -a
+   35  docker rm *
+   36  docker rm fcfa261f5314
+   37  docker ps -a
+   38  docker rm a8e96fea1f03
+   39  docker ps -a
+   40  docker ps
+   41  docker excec -ti cc8c2d09fd37 sh
+   42  docker exec -ti cc8c2d09fd37 sh
+   43  docker ps
+   44  docker stop cc8c2d09fd37
+   45  docker rm cc8c2d09fd37
+   46  docker ps -a
+   47  docker exec -ti cc8c2d09fd37 sh
+   48  docker ps
+   49  docker exec -ti f9288dc9d368 sh
+   50  docker ps
+   51  docker stop f9288dc9d368
+   52  docker rm f9288dc9d368
+   53  docker ps -a
+   54  cd ..
+   55  ls
+   56  cd cocadmin/
+   57  ls
+   58  cd 02
+   59  ls
+   60  mkdir exo1
+   61  cd exo1/
+   62  history >history.txt

@@ -1,0 +1,17 @@
+Sending build context to Docker daemon  2.788MB
+Step 1/5 : FROM nginx:stable-alpine3.20
+ ---> 42ce3d3585d4
+Step 2/5 : RUN apk update
+ ---> Using cache
+ ---> 975c722b76b8
+Step 3/5 : RUN apk upgrade
+ ---> Using cache
+ ---> cae3a18b5875
+Step 4/5 : RUN apk add htop
+ ---> Using cache
+ ---> 7b611c6a3478
+Step 5/5 : COPY app /usr/share/nginx/html
+ ---> Using cache
+ ---> 7e5fb49150c1
+Successfully built 7e5fb49150c1
+Successfully tagged mon-app-2048:latest
