@@ -1,0 +1,83 @@
+    1  echo <3
+    2  echo > ~/.bash_history 
+    3  echo "<3"
+    4  git clone git@github.com:ctsm63/cocadmin.git
+    5  snap install terraform --classic
+    6  terraform --version
+    7  code-server --install-extension hashicorp.terraform
+    8  snap install aws-cli --classic
+    9  aws --version
+   10  #export AWS_ACCESS_KEY_ID="ASIAUXX.......XXX"
+   11  #export AWS_SECRET_ACCESS_KEY="XxRw1Nmxxxx............xxxxxx"
+   12  #export AWS_SESSION_TOKEN="IQoxxx...xxxNL8="
+   13  export AWS_ACCESS_KEY_ID="pour de vrai"
+   14  export AWS_SECRET_ACCESS_KEY="pour de vrai"
+   15  export AWS_SESSION_TOKEN="pour de vrai"
+   16  #aws aws sts get-caller-identity
+   17  aws sts get-caller-identity
+   18  pwd
+   19  cd cocadmin/
+   20  ls
+   21  cd 03
+   22  ls
+   23  mkdir exo01
+   24  cd exo01
+   25  mkdir terraform-2048
+   26  cd terraform-2048
+   27  touch main.tf
+   28  nano main.tf
+   29  ls
+   30  cat main.tf 
+   31  cat ~/.ssh/id_ed25519.pub 
+   32  terraform init
+   33  terraform apply -auto-approve
+   34  cat terraform.tfstate | grep "public_ip"
+   35  curl $(cat terraform.tfstate | grep "public_ip" | cut -f4 -d'"'):5000
+   36  terraform destroy -auto-approve
+   37  ls
+   38* 
+   39  terraform init | tee 01terraform.init.log
+   40  ls
+   41  cat 01terraform.init.log 
+   42  terraform apply -auto-approve | tee 02terraform.apply.log
+   43  ls
+   44  cat 02terraform.apply.log 
+   45  less 02terraform.apply.log 
+   46  less -h
+   47  man less
+   48  less -DCb 02terraform.apply.log 
+   49* 
+   50  more 02terraform.apply.log 
+   51  echo $(cat terraform.tfstate | grep "public_ip" | cut -f4 -d'"')
+   52  ping $(cat terraform.tfstate | grep "public_ip" | cut -f4 -d'"')
+   53  lynx $(cat terraform.tfstate | grep "public_ip" | cut -f4 -d'"'):5000
+   54  terraform destroy -auto-approve | tee 03terraform.destroy.log
+   55  ls
+   56  cd ..
+   57  hystory >history.txt
+   58  history >history.txt
+   59  cat history.txt 
+   60  aws sts get-caller-identity
+   61  nano history.txt
+   62  ls
+   63  cd ../..
+   64  ls
+   65  git status
+   66  git add *
+   67  git status
+   68  cat 03/exo01/terraform-2048/.terraform.lock.hcl
+   69  cat 03/exo01/terraform-2048/.terraform/providers/registry.terraform.io/hashicorp/aws/4.67.0/linux_amd64/terraform-provider-aws_v4.67.0_x5
+   70  git status
+   71* 
+   72  git status
+   73  git rm 03/exo01/terraform-2048/.terraform/providers/registry.terraform.io/hashicorp/aws/4.67.0/linux_amd64/terraform-provider-aws_v4.67.0_x5
+   74  git --cached rm 03/exo01/terraform-2048/.terraform/providers/registry.terraform.io/hashicorp/aws/4.67.0/linux_amd64/terraform-provider-aws_v4.67.0_x5
+   75  git rm --cached 03/exo01/terraform-2048/.terraform/providers/registry.terraform.io/hashicorp/aws/4.67.0/linux_amd64/terraform-provider-aws_v4.67.0_x5
+   76  git status
+   77  git rm --cached 03/exo01/terraform-2048/.terraform.lock.hcl
+   78  git status
+   79  ls
+   80  cd 03
+   81  ls
+   82  cd exo01/
+   83  history | tee history.txt
