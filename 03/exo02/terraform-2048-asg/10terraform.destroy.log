@@ -1,0 +1,677 @@
+[0m[1maws_key_pair.mysshkey: Refreshing state... [id=mykey][0m
+[0m[1maws_security_group.alb: Refreshing state... [id=sg-016e88317d3c351aa][0m
+[0m[1mdata.aws_vpc.my_vpc: Reading...[0m[0m
+[0m[1maws_security_group.app_server: Refreshing state... [id=sg-0725fa2812d4227d1][0m
+[0m[1maws_security_group.docdb: Refreshing state... [id=sg-04d45b23eb95ed622][0m
+[0m[1maws_docdb_cluster.mydb: Refreshing state... [id=mydb][0m
+[0m[1mdata.aws_vpc.my_vpc: Read complete after 1s [id=vpc-0791922d124560af0][0m
+[0m[1maws_lb_target_group.app_lb_target_group: Refreshing state... [id=arn:aws:elasticloadbalancing:eu-west-3:225989364215:targetgroup/app-lb-tg/0b54386dfde58556][0m
+[0m[1mdata.aws_subnets.my_subnets: Reading...[0m[0m
+[0m[1mdata.aws_subnets.my_subnets: Read complete after 0s [id=eu-west-3][0m
+[0m[1maws_lb.app_lb: Refreshing state... [id=arn:aws:elasticloadbalancing:eu-west-3:225989364215:loadbalancer/app/app-lb/da57cd6bedcd8d84][0m
+[0m[1mdata.template_file.userdata: Reading...[0m[0m
+[0m[1mdata.template_file.userdata: Read complete after 0s [id=c64e8c0dc3337887aae458504eae57963cc5b4c2595fe9fc12979921a2439b2d][0m
+[0m[1maws_launch_template.app_server: Refreshing state... [id=lt-0b44f84593baff545][0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Refreshing state... [id=docdb-instance-0][0m
+[0m[1maws_lb_listener.app_lb_listener: Refreshing state... [id=arn:aws:elasticloadbalancing:eu-west-3:225989364215:listener/app/app-lb/da57cd6bedcd8d84/7aa4059a5765f4ff][0m
+[0m[1maws_autoscaling_group.app_server_asg: Refreshing state... [id=terraform-20250623193047804100000003][0m
+[0m[1maws_autoscaling_policy.cpu_scaling_policy: Refreshing state... [id=cpu-target-tracking-policy][0m
+[0m[1maws_autoscaling_attachment.asg_attachment: Refreshing state... [id=terraform-20250623193047804100000003-20250623193428124100000004][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # aws_autoscaling_attachment.asg_attachment[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_autoscaling_attachment" "asg_attachment" {
+      [31m-[0m[0m autoscaling_group_name = "terraform-20250623193047804100000003" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "terraform-20250623193047804100000003-20250623193428124100000004" [90m-> null[0m[0m
+      [31m-[0m[0m lb_target_group_arn    = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:targetgroup/app-lb-tg/0b54386dfde58556" [90m-> null[0m[0m
+    }
+
+[1m  # aws_autoscaling_group.app_server_asg[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_autoscaling_group" "app_server_asg" {
+      [31m-[0m[0m arn                       = "arn:aws:autoscaling:eu-west-3:225989364215:autoScalingGroup:97e47ab0-252f-4ae0-b017-581edda64c62:autoScalingGroupName/terraform-20250623193047804100000003" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zones        = [
+          [31m-[0m[0m "eu-west-3a",
+          [31m-[0m[0m "eu-west-3b",
+          [31m-[0m[0m "eu-west-3c",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m capacity_rebalance        = false [90m-> null[0m[0m
+      [31m-[0m[0m default_cooldown          = 300 [90m-> null[0m[0m
+      [31m-[0m[0m default_instance_warmup   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m desired_capacity          = 1 [90m-> null[0m[0m
+      [31m-[0m[0m enabled_metrics           = [] [90m-> null[0m[0m
+      [31m-[0m[0m force_delete              = false [90m-> null[0m[0m
+      [31m-[0m[0m force_delete_warm_pool    = false [90m-> null[0m[0m
+      [31m-[0m[0m health_check_grace_period = 300 [90m-> null[0m[0m
+      [31m-[0m[0m health_check_type         = "EC2" [90m-> null[0m[0m
+      [31m-[0m[0m id                        = "terraform-20250623193047804100000003" [90m-> null[0m[0m
+      [31m-[0m[0m load_balancers            = [] [90m-> null[0m[0m
+      [31m-[0m[0m max_instance_lifetime     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m max_size                  = 2 [90m-> null[0m[0m
+      [31m-[0m[0m metrics_granularity       = "1Minute" [90m-> null[0m[0m
+      [31m-[0m[0m min_size                  = 1 [90m-> null[0m[0m
+      [31m-[0m[0m name                      = "terraform-20250623193047804100000003" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix               = "terraform-" [90m-> null[0m[0m
+      [31m-[0m[0m predicted_capacity        = 0 [90m-> null[0m[0m
+      [31m-[0m[0m protect_from_scale_in     = false [90m-> null[0m[0m
+      [31m-[0m[0m service_linked_role_arn   = "arn:aws:iam::225989364215:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling" [90m-> null[0m[0m
+      [31m-[0m[0m suspended_processes       = [] [90m-> null[0m[0m
+      [31m-[0m[0m target_group_arns         = [
+          [31m-[0m[0m "arn:aws:elasticloadbalancing:eu-west-3:225989364215:targetgroup/app-lb-tg/0b54386dfde58556",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m termination_policies      = [] [90m-> null[0m[0m
+      [31m-[0m[0m vpc_zone_identifier       = [
+          [31m-[0m[0m "subnet-05e98ab76b1125cca",
+          [31m-[0m[0m "subnet-0bc45b3f8281e5b22",
+          [31m-[0m[0m "subnet-0bd69807d41df7d90",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m wait_for_capacity_timeout = "10m" [90m-> null[0m[0m
+      [31m-[0m[0m warm_pool_size            = 0 [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m launch_template {
+          [31m-[0m[0m id      = "lt-0b44f84593baff545" [90m-> null[0m[0m
+          [31m-[0m[0m name    = "app-server-20250623193047298700000001" [90m-> null[0m[0m
+          [31m-[0m[0m version = "$Latest" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m tag {
+          [31m-[0m[0m key                 = "Name" [90m-> null[0m[0m
+          [31m-[0m[0m propagate_at_launch = true [90m-> null[0m[0m
+          [31m-[0m[0m value               = "app_2048" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # aws_autoscaling_policy.cpu_scaling_policy[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_autoscaling_policy" "cpu_scaling_policy" {
+      [31m-[0m[0m arn                       = "arn:aws:autoscaling:eu-west-3:225989364215:scalingPolicy:d2ec196a-cf6a-40e0-a3a3-092edef89cfe:autoScalingGroupName/terraform-20250623193047804100000003:policyName/cpu-target-tracking-policy" [90m-> null[0m[0m
+      [31m-[0m[0m autoscaling_group_name    = "terraform-20250623193047804100000003" [90m-> null[0m[0m
+      [31m-[0m[0m cooldown                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enabled                   = true [90m-> null[0m[0m
+      [31m-[0m[0m estimated_instance_warmup = 0 [90m-> null[0m[0m
+      [31m-[0m[0m id                        = "cpu-target-tracking-policy" [90m-> null[0m[0m
+      [31m-[0m[0m min_adjustment_magnitude  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m name                      = "cpu-target-tracking-policy" [90m-> null[0m[0m
+      [31m-[0m[0m policy_type               = "TargetTrackingScaling" [90m-> null[0m[0m
+      [31m-[0m[0m scaling_adjustment        = 0 [90m-> null[0m[0m
+        [90m# (2 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m target_tracking_configuration {
+          [31m-[0m[0m disable_scale_in = false [90m-> null[0m[0m
+          [31m-[0m[0m target_value     = 20 [90m-> null[0m[0m
+
+          [31m-[0m[0m predefined_metric_specification {
+              [31m-[0m[0m predefined_metric_type = "ASGAverageCPUUtilization" [90m-> null[0m[0m
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+    }
+
+[1m  # aws_docdb_cluster.mydb[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_docdb_cluster" "mydb" {
+      [31m-[0m[0m arn                             = "arn:aws:rds:eu-west-3:225989364215:cluster:mydb" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zones              = [
+          [31m-[0m[0m "eu-west-3a",
+          [31m-[0m[0m "eu-west-3b",
+          [31m-[0m[0m "eu-west-3c",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m backup_retention_period         = 1 [90m-> null[0m[0m
+      [31m-[0m[0m cluster_identifier              = "mydb" [90m-> null[0m[0m
+      [31m-[0m[0m cluster_members                 = [
+          [31m-[0m[0m "docdb-instance-0",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m cluster_resource_id             = "cluster-LWFPTKXH25UBWLBU2SVWZOR4XE" [90m-> null[0m[0m
+      [31m-[0m[0m db_cluster_parameter_group_name = "default.docdb5.0" [90m-> null[0m[0m
+      [31m-[0m[0m db_subnet_group_name            = "default" [90m-> null[0m[0m
+      [31m-[0m[0m deletion_protection             = false [90m-> null[0m[0m
+      [31m-[0m[0m enabled_cloudwatch_logs_exports = [] [90m-> null[0m[0m
+      [31m-[0m[0m endpoint                        = "mydb.cluster-cpqgegwguf2e.eu-west-3.docdb.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m engine                          = "docdb" [90m-> null[0m[0m
+      [31m-[0m[0m engine_version                  = "5.0.0" [90m-> null[0m[0m
+      [31m-[0m[0m hosted_zone_id                  = "Z3DCI3INAOY6D2" [90m-> null[0m[0m
+      [31m-[0m[0m id                              = "mydb" [90m-> null[0m[0m
+      [31m-[0m[0m master_password                 = (sensitive value) [90m-> null[0m[0m
+      [31m-[0m[0m master_username                 = "username" [90m-> null[0m[0m
+      [31m-[0m[0m port                            = 27017 [90m-> null[0m[0m
+      [31m-[0m[0m preferred_backup_window         = "12:15-12:45" [90m-> null[0m[0m
+      [31m-[0m[0m preferred_maintenance_window    = "sat:06:08-sat:06:38" [90m-> null[0m[0m
+      [31m-[0m[0m reader_endpoint                 = "mydb.cluster-ro-cpqgegwguf2e.eu-west-3.docdb.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m skip_final_snapshot             = true [90m-> null[0m[0m
+      [31m-[0m[0m storage_encrypted               = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                            = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                        = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_security_group_ids          = [
+          [31m-[0m[0m "sg-04d45b23eb95ed622",
+        ] [90m-> null[0m[0m
+        [90m# (2 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_docdb_cluster_instance.docdb_instance[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_docdb_cluster_instance" "docdb_instance" {
+      [31m-[0m[0m apply_immediately            = true [90m-> null[0m[0m
+      [31m-[0m[0m arn                          = "arn:aws:rds:eu-west-3:225989364215:db:docdb-instance-0" [90m-> null[0m[0m
+      [31m-[0m[0m auto_minor_version_upgrade   = true [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone            = "eu-west-3a" [90m-> null[0m[0m
+      [31m-[0m[0m ca_cert_identifier           = "rds-ca-rsa2048-g1" [90m-> null[0m[0m
+      [31m-[0m[0m cluster_identifier           = "mydb" [90m-> null[0m[0m
+      [31m-[0m[0m db_subnet_group_name         = "default" [90m-> null[0m[0m
+      [31m-[0m[0m dbi_resource_id              = "db-7CUT6PLEBNTRBAGMIDRRMQISSA" [90m-> null[0m[0m
+      [31m-[0m[0m endpoint                     = "docdb-instance-0.cpqgegwguf2e.eu-west-3.docdb.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m engine                       = "docdb" [90m-> null[0m[0m
+      [31m-[0m[0m engine_version               = "5.0.0" [90m-> null[0m[0m
+      [31m-[0m[0m id                           = "docdb-instance-0" [90m-> null[0m[0m
+      [31m-[0m[0m identifier                   = "docdb-instance-0" [90m-> null[0m[0m
+      [31m-[0m[0m instance_class               = "db.t3.medium" [90m-> null[0m[0m
+      [31m-[0m[0m port                         = 27017 [90m-> null[0m[0m
+      [31m-[0m[0m preferred_backup_window      = "12:15-12:45" [90m-> null[0m[0m
+      [31m-[0m[0m preferred_maintenance_window = "tue:03:09-tue:03:39" [90m-> null[0m[0m
+      [31m-[0m[0m promotion_tier               = 0 [90m-> null[0m[0m
+      [31m-[0m[0m publicly_accessible          = false [90m-> null[0m[0m
+      [31m-[0m[0m storage_encrypted            = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                         = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                     = {} [90m-> null[0m[0m
+      [31m-[0m[0m writer                       = true [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # aws_key_pair.mysshkey[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_key_pair" "mysshkey" {
+      [31m-[0m[0m arn             = "arn:aws:ec2:eu-west-3:225989364215:key-pair/mykey" [90m-> null[0m[0m
+      [31m-[0m[0m fingerprint     = "fIEaaafp59mQd/1aBUm5nyF/t5ufYq7Njb9PQxe9s/E=" [90m-> null[0m[0m
+      [31m-[0m[0m id              = "mykey" [90m-> null[0m[0m
+      [31m-[0m[0m key_name        = "mykey" [90m-> null[0m[0m
+      [31m-[0m[0m key_pair_id     = "key-01ba581ed147556b9" [90m-> null[0m[0m
+      [31m-[0m[0m key_type        = "ed25519" [90m-> null[0m[0m
+      [31m-[0m[0m public_key      = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEcQDG0+BY2ekk8xbXoQQOQmcTP2k6ncwsxCRxPJ0b03" [90m-> null[0m[0m
+      [31m-[0m[0m tags            = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all        = {} [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # aws_launch_template.app_server[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_launch_template" "app_server" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:eu-west-3:225989364215:launch-template/lt-0b44f84593baff545" [90m-> null[0m[0m
+      [31m-[0m[0m default_version                      = 1 [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_termination              = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "lt-0b44f84593baff545" [90m-> null[0m[0m
+      [31m-[0m[0m image_id                             = "ami-04ec97dc75ac850b1" [90m-> null[0m[0m
+      [31m-[0m[0m instance_type                        = "t2.micro" [90m-> null[0m[0m
+      [31m-[0m[0m key_name                             = "mykey" [90m-> null[0m[0m
+      [31m-[0m[0m latest_version                       = 1 [90m-> null[0m[0m
+      [31m-[0m[0m name                                 = "app-server-20250623193047298700000001" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix                          = "app-server-" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_names                 = [] [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {} [90m-> null[0m[0m
+      [31m-[0m[0m user_data                            = "IyEvYmluL2Jhc2gKYXB0IHVwZGF0ZQphcHQgaW5zdGFsbCAteSBkb2NrZXIuaW8KZG9ja2VyIHJ1biAtZCAtcCA1MDAwOjUwMDAgLWUgTU9OR09fVVJJPSJtb25nb2RiOi8vdXNlcm5hbWU6cGFzc3dvcmRAbXlkYi5jbHVzdGVyLWNwcWdlZ3dndWYyZS5ldS13ZXN0LTMuZG9jZGIuYW1hem9uYXdzLmNvbToyNzAxNy8/dGxzPXRydWUmdGxzQ0FGaWxlPWdsb2JhbC1idW5kbGUucGVtJnJlcGxpY2FTZXQ9cnMwJnJlYWRQcmVmZXJlbmNlPXNlY29uZGFyeVByZWZlcnJlZCZyZXRyeVdyaXRlcz1mYWxzZSIgY29jYWRtaW4vMjA0OC1tZXJuCgo=" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_security_group_ids               = [
+          [31m-[0m[0m "sg-0725fa2812d4227d1",
+        ] [90m-> null[0m[0m
+        [90m# (5 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m tag_specifications {
+          [31m-[0m[0m resource_type = "instance" [90m-> null[0m[0m
+          [31m-[0m[0m tags          = {
+              [31m-[0m[0m "Name" = "delete"
+            } [90m-> null[0m[0m
+        }
+    }
+
+[1m  # aws_lb.app_lb[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_lb" "app_lb" {
+      [31m-[0m[0m arn                                         = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:loadbalancer/app/app-lb/da57cd6bedcd8d84" [90m-> null[0m[0m
+      [31m-[0m[0m arn_suffix                                  = "app/app-lb/da57cd6bedcd8d84" [90m-> null[0m[0m
+      [31m-[0m[0m desync_mitigation_mode                      = "defensive" [90m-> null[0m[0m
+      [31m-[0m[0m dns_name                                    = "app-lb-1495976883.eu-west-3.elb.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m drop_invalid_header_fields                  = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_cross_zone_load_balancing            = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_deletion_protection                  = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_http2                                = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_tls_version_and_cipher_suite_headers = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_waf_fail_open                        = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_xff_client_port                      = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                          = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:loadbalancer/app/app-lb/da57cd6bedcd8d84" [90m-> null[0m[0m
+      [31m-[0m[0m idle_timeout                                = 60 [90m-> null[0m[0m
+      [31m-[0m[0m internal                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m ip_address_type                             = "ipv4" [90m-> null[0m[0m
+      [31m-[0m[0m load_balancer_type                          = "application" [90m-> null[0m[0m
+      [31m-[0m[0m name                                        = "app-lb" [90m-> null[0m[0m
+      [31m-[0m[0m preserve_host_header                        = false [90m-> null[0m[0m
+      [31m-[0m[0m security_groups                             = [
+          [31m-[0m[0m "sg-016e88317d3c351aa",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m subnets                                     = [
+          [31m-[0m[0m "subnet-05e98ab76b1125cca",
+          [31m-[0m[0m "subnet-0bc45b3f8281e5b22",
+          [31m-[0m[0m "subnet-0bd69807d41df7d90",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags                                        = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                    = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                      = "vpc-0791922d124560af0" [90m-> null[0m[0m
+      [31m-[0m[0m xff_header_processing_mode                  = "append" [90m-> null[0m[0m
+      [31m-[0m[0m zone_id                                     = "Z3Q77PNBQS71R4" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+
+      [31m-[0m[0m access_logs {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+
+      [31m-[0m[0m subnet_mapping {
+          [31m-[0m[0m subnet_id            = "subnet-05e98ab76b1125cca" [90m-> null[0m[0m
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+      [31m-[0m[0m subnet_mapping {
+          [31m-[0m[0m subnet_id            = "subnet-0bc45b3f8281e5b22" [90m-> null[0m[0m
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+      [31m-[0m[0m subnet_mapping {
+          [31m-[0m[0m subnet_id            = "subnet-0bd69807d41df7d90" [90m-> null[0m[0m
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # aws_lb_listener.app_lb_listener[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_lb_listener" "app_lb_listener" {
+      [31m-[0m[0m arn               = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:listener/app/app-lb/da57cd6bedcd8d84/7aa4059a5765f4ff" [90m-> null[0m[0m
+      [31m-[0m[0m id                = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:listener/app/app-lb/da57cd6bedcd8d84/7aa4059a5765f4ff" [90m-> null[0m[0m
+      [31m-[0m[0m load_balancer_arn = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:loadbalancer/app/app-lb/da57cd6bedcd8d84" [90m-> null[0m[0m
+      [31m-[0m[0m port              = 80 [90m-> null[0m[0m
+      [31m-[0m[0m protocol          = "HTTP" [90m-> null[0m[0m
+      [31m-[0m[0m tags              = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all          = {} [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+
+      [31m-[0m[0m default_action {
+          [31m-[0m[0m order            = 1 [90m-> null[0m[0m
+          [31m-[0m[0m target_group_arn = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:targetgroup/app-lb-tg/0b54386dfde58556" [90m-> null[0m[0m
+          [31m-[0m[0m type             = "forward" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # aws_lb_target_group.app_lb_target_group[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_lb_target_group" "app_lb_target_group" {
+      [31m-[0m[0m arn                                = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:targetgroup/app-lb-tg/0b54386dfde58556" [90m-> null[0m[0m
+      [31m-[0m[0m arn_suffix                         = "targetgroup/app-lb-tg/0b54386dfde58556" [90m-> null[0m[0m
+      [31m-[0m[0m connection_termination             = false [90m-> null[0m[0m
+      [31m-[0m[0m deregistration_delay               = "300" [90m-> null[0m[0m
+      [31m-[0m[0m id                                 = "arn:aws:elasticloadbalancing:eu-west-3:225989364215:targetgroup/app-lb-tg/0b54386dfde58556" [90m-> null[0m[0m
+      [31m-[0m[0m ip_address_type                    = "ipv4" [90m-> null[0m[0m
+      [31m-[0m[0m lambda_multi_value_headers_enabled = false [90m-> null[0m[0m
+      [31m-[0m[0m load_balancing_algorithm_type      = "round_robin" [90m-> null[0m[0m
+      [31m-[0m[0m load_balancing_cross_zone_enabled  = "use_load_balancer_configuration" [90m-> null[0m[0m
+      [31m-[0m[0m name                               = "app-lb-tg" [90m-> null[0m[0m
+      [31m-[0m[0m port                               = 5000 [90m-> null[0m[0m
+      [31m-[0m[0m protocol                           = "HTTP" [90m-> null[0m[0m
+      [31m-[0m[0m protocol_version                   = "HTTP1" [90m-> null[0m[0m
+      [31m-[0m[0m proxy_protocol_v2                  = false [90m-> null[0m[0m
+      [31m-[0m[0m slow_start                         = 0 [90m-> null[0m[0m
+      [31m-[0m[0m tags                               = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                           = {} [90m-> null[0m[0m
+      [31m-[0m[0m target_type                        = "instance" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                             = "vpc-0791922d124560af0" [90m-> null[0m[0m
+
+      [31m-[0m[0m health_check {
+          [31m-[0m[0m enabled             = true [90m-> null[0m[0m
+          [31m-[0m[0m healthy_threshold   = 5 [90m-> null[0m[0m
+          [31m-[0m[0m interval            = 30 [90m-> null[0m[0m
+          [31m-[0m[0m matcher             = "200" [90m-> null[0m[0m
+          [31m-[0m[0m path                = "/" [90m-> null[0m[0m
+          [31m-[0m[0m port                = "traffic-port" [90m-> null[0m[0m
+          [31m-[0m[0m protocol            = "HTTP" [90m-> null[0m[0m
+          [31m-[0m[0m timeout             = 5 [90m-> null[0m[0m
+          [31m-[0m[0m unhealthy_threshold = 2 [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m stickiness {
+          [31m-[0m[0m cookie_duration = 86400 [90m-> null[0m[0m
+          [31m-[0m[0m enabled         = false [90m-> null[0m[0m
+          [31m-[0m[0m type            = "lb_cookie" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m target_failover {}
+    }
+
+[1m  # aws_security_group.alb[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "alb" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:eu-west-3:225989364215:security-group/sg-016e88317d3c351aa" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Security group for ALB" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-016e88317d3c351aa" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 80
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "alb-sg" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "225989364215" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0791922d124560af0" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # aws_security_group.app_server[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "app_server" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:eu-west-3:225989364215:security-group/sg-0725fa2812d4227d1" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Authoriser le traffic sur port 5000 depuis le LB" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0725fa2812d4227d1" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 22
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 22
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 5000
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 5000
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = []
+              [31m-[0m[0m from_port        = 5000
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = [
+                  [31m-[0m[0m "sg-016e88317d3c351aa",
+                ]
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 5000
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "app_2048" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "225989364215" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0791922d124560af0" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # aws_security_group.docdb[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "docdb" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:eu-west-3:225989364215:security-group/sg-04d45b23eb95ed622" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Security group for DocumentDB" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-04d45b23eb95ed622" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = []
+              [31m-[0m[0m from_port        = 27017
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = [
+                  [31m-[0m[0m "sg-0725fa2812d4227d1",
+                ]
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 27017
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "docdb-sg" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "225989364215" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0791922d124560af0" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 13 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m alb_endpoint = "app-lb-1495976883.eu-west-3.elb.amazonaws.com" [90m-> null[0m[0m
+[0m[1maws_lb_listener.app_lb_listener: Destroying... [id=arn:aws:elasticloadbalancing:eu-west-3:225989364215:listener/app/app-lb/da57cd6bedcd8d84/7aa4059a5765f4ff][0m[0m
+[0m[1maws_autoscaling_attachment.asg_attachment: Destroying... [id=terraform-20250623193047804100000003-20250623193428124100000004][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Destroying... [id=docdb-instance-0][0m[0m
+[0m[1maws_autoscaling_policy.cpu_scaling_policy: Destroying... [id=cpu-target-tracking-policy][0m[0m
+[0m[1maws_lb_listener.app_lb_listener: Destruction complete after 1s[0m
+[0m[1maws_lb.app_lb: Destroying... [id=arn:aws:elasticloadbalancing:eu-west-3:225989364215:loadbalancer/app/app-lb/da57cd6bedcd8d84][0m[0m
+[0m[1maws_autoscaling_attachment.asg_attachment: Destruction complete after 1s[0m
+[0m[1maws_lb_target_group.app_lb_target_group: Destroying... [id=arn:aws:elasticloadbalancing:eu-west-3:225989364215:targetgroup/app-lb-tg/0b54386dfde58556][0m[0m
+[0m[1maws_autoscaling_policy.cpu_scaling_policy: Destruction complete after 1s[0m
+[0m[1maws_autoscaling_group.app_server_asg: Destroying... [id=terraform-20250623193047804100000003][0m[0m
+[0m[1maws_lb_target_group.app_lb_target_group: Destruction complete after 0s[0m
+[0m[1maws_lb.app_lb: Destruction complete after 2s[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 00m10s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 00m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 00m20s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 00m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 00m30s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 00m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 00m40s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 00m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 00m50s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 00m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 01m00s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 01m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 01m10s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 01m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 01m20s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Still destroying... [id=terraform-20250623193047804100000003, 01m20s elapsed][0m[0m
+[0m[1maws_autoscaling_group.app_server_asg: Destruction complete after 1m22s[0m
+[0m[1maws_launch_template.app_server: Destroying... [id=lt-0b44f84593baff545][0m[0m
+[0m[1maws_launch_template.app_server: Destruction complete after 1s[0m
+[0m[1maws_key_pair.mysshkey: Destroying... [id=mykey][0m[0m
+[0m[1maws_key_pair.mysshkey: Destruction complete after 0s[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 01m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 01m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 01m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 02m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 02m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 02m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 02m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 02m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 02m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 03m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 03m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 03m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 03m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 03m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 03m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 04m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 04m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 04m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 04m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 04m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 04m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 05m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 05m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 05m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 05m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 05m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 05m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 06m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 06m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 06m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 06m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 06m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 06m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 07m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 07m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 07m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 07m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 07m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 07m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 08m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 08m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 08m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 08m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 08m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 08m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 09m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 09m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 09m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 09m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 09m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 09m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 10m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 10m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 10m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 10m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 10m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 10m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 11m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 11m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 11m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 11m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 11m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 11m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 12m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 12m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 12m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 12m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 12m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 12m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 13m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 13m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 13m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 13m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 13m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 13m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 14m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 14m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 14m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 14m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 14m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 14m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 15m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 15m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 15m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 15m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 15m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 15m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 16m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 16m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 16m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 16m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 16m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 16m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 17m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 17m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 17m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 17m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 17m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 17m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 18m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 18m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 18m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 18m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 18m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 18m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 19m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 19m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 19m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 19m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 19m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 19m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 20m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 20m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 20m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 20m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 20m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 20m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 21m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 21m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 21m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 21m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 21m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 21m50s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 22m00s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 22m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Still destroying... [id=docdb-instance-0, 22m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster_instance.docdb_instance[0]: Destruction complete after 22m29s[0m
+[0m[1maws_docdb_cluster.mydb: Destroying... [id=mydb][0m[0m
+[0m[1maws_docdb_cluster.mydb: Still destroying... [id=mydb, 00m10s elapsed][0m[0m
+[0m[1maws_docdb_cluster.mydb: Still destroying... [id=mydb, 00m20s elapsed][0m[0m
+[0m[1maws_docdb_cluster.mydb: Still destroying... [id=mydb, 00m30s elapsed][0m[0m
+[0m[1maws_docdb_cluster.mydb: Still destroying... [id=mydb, 00m40s elapsed][0m[0m
+[0m[1maws_docdb_cluster.mydb: Destruction complete after 40s[0m
+[0m[1maws_security_group.docdb: Destroying... [id=sg-04d45b23eb95ed622][0m[0m
+[0m[1maws_security_group.docdb: Destruction complete after 1s[0m
+[0m[1maws_security_group.app_server: Destroying... [id=sg-0725fa2812d4227d1][0m[0m
+[0m[1maws_security_group.app_server: Destruction complete after 2s[0m
+[0m[1maws_security_group.alb: Destroying... [id=sg-016e88317d3c351aa][0m[0m
+[0m[1maws_security_group.alb: Destruction complete after 1s[0m
+[0m[1m[32m
+Destroy complete! Resources: 13 destroyed.
+[0m

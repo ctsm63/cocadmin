@@ -1,0 +1,44 @@
+root@DESKTOP-V7HPAEF:~/hey# ./hey_linux_amd64 -n 1000 -c 20 http://app-lb-1495976883.eu-west-3.elb.amazonaws.com
+
+Summary:
+  Total:        5.7911 secs
+  Slowest:      2.7400 secs
+  Fastest:      0.0128 secs
+  Average:      0.1066 secs
+  Requests/sec: 172.6792
+
+  Total data:   4819000 bytes
+  Size/request: 4819 bytes
+
+Response time histogram:
+  0.013 [1]     |
+  0.286 [974]   |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.558 [5]     |
+  0.831 [0]     |
+  1.104 [0]     |
+  1.376 [0]     |
+  1.649 [0]     |
+  1.922 [0]     |
+  2.195 [0]     |
+  2.467 [0]     |
+  2.740 [20]    |■
+
+
+Latency distribution:
+  10% in 0.0262 secs
+  25% in 0.0336 secs
+  50% in 0.0434 secs
+  75% in 0.0586 secs
+  90% in 0.0725 secs
+  95% in 0.2491 secs
+  99% in 2.7176 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:   0.0423 secs, 0.0128 secs, 2.7400 secs
+  DNS-lookup:   0.0423 secs, 0.0000 secs, 2.1150 secs
+  req write:    0.0000 secs, 0.0000 secs, 0.0012 secs
+  resp wait:    0.0535 secs, 0.0117 secs, 0.6146 secs
+  resp read:    0.0108 secs, 0.0001 secs, 0.2245 secs
+
+Status code distribution:
+  [200] 1000 responses

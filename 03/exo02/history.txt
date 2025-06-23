@@ -1,0 +1,101 @@
+    1  echo <3
+    2  echo > ~/.bash_history 
+    3  echo "<3"
+    4  pwd
+    5  ls
+    6  cd cocadmin/
+    7  ls
+    8  cd 03
+    9  ls
+   10  cd exo02
+   11  ls
+   12  cd terraform-2048-asg/
+   13  ls
+   14  less -h
+   15  mann less
+   16  man less
+   17  la 10terraform.destroy.log 
+   18  tail -h 10terraform.destroy.log 
+   19  tail -f 10terraform.destroy.log 
+   20  nmon
+   21  cd ..
+   22  cd ../..
+   23  ls -lha
+   24  git status
+   25  git add *
+   26  git status
+   27  git rm --cached 03/exo02/terraform-2048-asg/.terraform.lock.hcl
+   28  git rm --cached 03/exo02/terraform-2048-asg/.terraform/providers/registry.terraform.io/hashicorp/aws/4.67.0/linux_amd64/terraform-provider-aws_v4.67.0_x5
+   29  git rm --cached 03/exo02/terraform-2048-asg/.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/linux_amd64/terraform-provider-template_v2.2.0_x4
+   30  git status
+   31  ls
+   32  cd 03
+   33  ls
+   34  cd exo02
+   35  history >history.txt
+#############
+    1  echo <3
+    2  echo > ~/.bash_history 
+    3  echo "<3"
+    4  cd cocadmin/03/exo02/terraform-2048-asg/
+    5  ls
+    6  nano main.tf
+    7  nano sg.tf
+    8  nano userdata.sh 
+    9  nano asg.tf
+   10  ls
+   11  nano alb.tf
+   12  nano mongo.tf
+   13  terraform init | tee 00terraform.init.log
+   14  ls
+   15  cat 00terraform.init.log 
+   16  terraform apply -auto-approve | tee 01terraform.apply.log
+   17  echo $AWS_ACCESS_KEY_ID
+   18  export AWS_ACCESS_KEY_ID="...."
+   19  export AWS_SECRET_ACCESS_KEY="...."
+   20  export AWS_SESSION_TOKEN="..."
+   21  echo $AWS_ACCESS_KEY_ID
+   22  terraform apply -auto-approve | tee 01terraform.apply.log
+   23  terraform output -raw alb_endpoint
+   24  cat terraform.tfstate | grep \"public_ip\"
+   25  cat terraform.tfstate
+   26  cat terraform.tfstate >04terraform.tfstate.json
+   27  less 04terraform.tfstate.json 
+   28  cat terraform.tfstate | grep \"public_ip\"
+   29  terraform output -raw alb_endpoint
+   30  terraform output -raw alb_endpoint | tee 05terraform.output.log
+   31  echo "tester l'application (ctrl+click) : http://$(terraform output -raw alb_endpoint)"
+   32  cd ..
+   33  ls
+   34  curl https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64
+   35  wget https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64
+   36  ls -lh
+   37  chmod u+x hey_linux_amd64 
+   38  ls -lh
+   39  less hey_linux_amd64 
+   40  ./hey_linux_amd64 -h
+   41  ls
+   42  rm -f hey_linux_amd64 
+   43  terraform output -raw alb_endpoint
+   44  ls
+   45  cd terraform-2048-asg/
+   46  terraform output -raw alb_endpoint
+   47  ls
+   48  nano 06hey.log
+   49  ssh app-lb-1495976883.eu-west-3.elb.amazonaws.com
+   50  ping app-lb-1495976883.eu-west-3.elb.amazonaws.com
+   51  ssh 13.37.89.58
+   52  apt install nmon
+   53  nmon
+   54  ls
+   55  nano 07hey.log
+   56  nano 08hey.log
+   57  nano 09hey.log
+   58  terraform destroy -auto-approve | tee 10terraform.destroy.log
+   59  ls -lh
+   60  ls -lha
+   61  ls -lha .terraform
+   62  ls
+   63  cd ..
+   64  echo "#############" >> history.txt 
+   65  history >>history.txt
